@@ -9,6 +9,7 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @student = Student.create(params)
     redirect_to action: "show", id: @student.id
   end
 
